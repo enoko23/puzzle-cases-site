@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Cases - Who is the Culprit?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #121212;
+            color: white;
+        }
+        h1 {
+            color: red;
+            font-size: 36px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Puzzle Cases - Who is the Culprit?</h1>
+    <p>Select your case and enter the suspect's name to check if you solved the mystery!</p>
+    
+    <label for="case-select">Choose a case:</label>
+    <select id="case-select">
+        <option value="room_408">The Mystery of Room 408</option>
+        <!-- Future cases can be added here -->
+    </select>
+    
+    <br>
+    
+    <input type="text" id="suspect-name" placeholder="Enter suspect's name">
+    <button onclick="checkCulprit()">Check</button>
+    
+    <p id="result"></p>
+    
+    <script>
+        function checkCulprit() {
+            const caseSelected = document.getElementById("case-select").value;
+            const suspect = document.getElementById("suspect-name").value.trim().toLowerCase();
+            let correctCulprit = "";
+            
+            if (caseSelected === "room_408") {
+                correctCulprit = "leonardo neri"; // Correct answer for Room 408
+            }
+            
+            if (suspect === correctCulprit) {
+                document.getElementById("result").innerText = "✅ Correct! You solved the case!";
+            } else {
+                document.getElementById("result").innerText = "❌ Wrong answer! Keep investigating...";
+            }
+        }
+    </script>
+</body>
+</html>
