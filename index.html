@@ -13,7 +13,7 @@
     <!-- Social Media Preview (Open Graph) -->
     <meta property="og:title" content="Puzzle Cases - Who is the Culprit?">
     <meta property="og:description" content="Solve mysteries and test your detective skills!">
-    <meta property="og:image" content="https://github.com/enoko23/puzzle-cases-site/blob/ffea1608f8647e689f937dc7a1708cf21d515cd5/copertina.jpg">
+    <meta property="og:image" content="https://raw.githubusercontent.com/enoko23/puzzle-cases-site/refs/heads/main/copertina.jpg">
     <meta property="og:url" content="https://www.tuodominio.com">
     <meta property="og:type" content="website">
 
@@ -21,7 +21,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Puzzle Cases - Who is the Culprit?">
     <meta name="twitter:description" content="Solve mysteries and test your detective skills!">
-    <meta name="twitter:image" content="https://github.com/enoko23/puzzle-cases-site/blob/ffea1608f8647e689f937dc7a1708cf21d515cd5/copertina.jpg">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/enoko23/puzzle-cases-site/refs/heads/main/copertina.jpg">
 
     <style>
         body {
@@ -45,33 +45,39 @@
             font-size: 20px;
             font-weight: bold;
         }
-        #banner {
+        .banner-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
             background-color: black;
-            text-align: center;
             padding: 5px;
             box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5);
         }
-        #banner img {
+        .banner {
+            text-align: center;
+            flex: 1;
+        }
+        .banner img {
             width: 100%;
             max-height: 100px;
             object-fit: cover;
         }
-        #banner p {
+        .banner p {
             color: white;
             font-size: 18px;
             font-weight: bold;
             margin: 5px 0;
         }
-        #banner a {
+        .banner a {
             color: yellow;
             text-decoration: none;
             font-weight: bold;
         }
-        #banner a:hover {
+        .banner a:hover {
             text-decoration: underline;
         }
     </style>
@@ -93,12 +99,20 @@
     
     <p id="result"></p>
 
-    <!-- Banner con immagine e link Etsy -->
-    <div id="banner">
-        <p>🔍 Solve More Mysteries! <a href="https://www.etsy.com/it/listing/1872174187/the-mystery-of-room-408-digital-escape" target="_blank">Compra Ora!</a></p>
-        <a href="https://www.etsy.com/it/listing/1872174187/the-mystery-of-room-408-digital-escape" target="_blank">
-            <img src="https://github.com/enoko23/puzzle-cases-site/blob/ffea1608f8647e689f937dc7a1708cf21d515cd5/copertina.jpg" alt="Compra Ora!">
-        </a>
+    <!-- Banner container con due banner affiancati -->
+    <div class="banner-container">
+        <div class="banner">
+            <p>🔍 Solve More Mysteries! <a href="https://www.etsy.com/it/listing/1872174187/the-mystery-of-room-408-digital-escape" target="_blank">Compra Ora!</a></p>
+            <a href="https://www.etsy.com/it/listing/1872174187/the-mystery-of-room-408-digital-escape" target="_blank">
+                <img src="https://raw.githubusercontent.com/enoko23/puzzle-cases-site/refs/heads/main/copertina.jpg" alt="Compra Ora!">
+            </a>
+        </div>
+        <div class="banner">
+            <p>🖼️ Uncover the Art Heist! <a href="https://handmadefunjess.etsy.com/listing/1870259137" target="_blank">Buy Now!</a></p>
+            <a href="https://handmadefunjess.etsy.com/listing/1870259137" target="_blank">
+                <img src="https://raw.githubusercontent.com/enoko23/puzzle-cases-site/refs/heads/main/copertina%20collectorok.jpg" alt="Buy Now!">
+            </a>
+        </div>
     </div>
     
     <script>
