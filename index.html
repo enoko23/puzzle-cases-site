@@ -5,15 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puzzle Cases - Who is the Culprit?</title>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BE18LLE717"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-BE18LLE717');
-    </script>
-
     <!-- SEO Meta Tags -->
     <meta name="description" content="Solve the mystery! Play an interactive detective escape room game.">
     <meta name="keywords" content="escape room, mystery game, detective, crime investigation, whodunit">
@@ -22,15 +13,18 @@
     <!-- Social Media Preview (Open Graph) -->
     <meta property="og:title" content="Puzzle Cases - Who is the Culprit?">
     <meta property="og:description" content="Solve mysteries and test your detective skills!">
-    <meta property="og:image" content="https://raw.githubusercontent.com/enoko23/puzzle-cases-site/refs/heads/main/Leonardo_Phoenix_10_A_dark_and_mysterious_banner_for_Twitch_Th_2.jpg">
-    <meta property="og:url" content="https://www.tuodominio.com">
+    <meta property="og:image" content="https://www.puzzlecases.com/cover-image.jpg">
+    <meta property="og:url" content="https://www.puzzlecases.com">
     <meta property="og:type" content="website">
 
-    <!-- Twitter Card (Per condivisione su Twitter) -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Puzzle Cases - Who is the Culprit?">
-    <meta name="twitter:description" content="Solve mysteries and test your detective skills!">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/enoko23/puzzle-cases-site/refs/heads/main/Leonardo_Phoenix_10_A_dark_and_mysterious_banner_for_Twitch_Th_2.jpg">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BE18LLE717"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-BE18LLE717');
+    </script>
 
     <style>
         body {
@@ -54,42 +48,20 @@
             font-size: 20px;
             font-weight: bold;
         }
+        /* Banner Section */
         .banner-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: black;
-            padding: 10px;
-            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5);
-        }
-        .banner {
+            margin-top: 50px;
             text-align: center;
-            width: 45%;
         }
-        .banner img {
-            width: 100%;
-            height: auto;
-            max-height: 80px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-        .banner p {
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            margin: 5px 0;
-        }
-        .banner a {
-            color: yellow;
+        .banner-container a {
+            display: inline-block;
             text-decoration: none;
-            font-weight: bold;
         }
-        .banner a:hover {
-            text-decoration: underline;
+        .banner-container img {
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
         }
     </style>
 </head>
@@ -110,22 +82,13 @@
     
     <p id="result"></p>
 
-    <!-- Banner container con due banner ottimizzati -->
+    <!-- New Central Banner -->
     <div class="banner-container">
-        <div class="banner">
-            <p>🔍 Solve More Mysteries! <a href="https://www.etsy.com/it/listing/1872174187/the-mystery-of-room-408-digital-escape" target="_blank">Compra Ora!</a></p>
-            <a href="https://www.etsy.com/it/listing/1872174187/the-mystery-of-room-408-digital-escape" target="_blank">
-                <img src="https://raw.githubusercontent.com/enoko23/puzzle-cases-site/refs/heads/main/Leonardo_Phoenix_10_A_dark_and_mysterious_banner_for_Twitch_Th_2.jpg" alt="Compra Ora!">
-            </a>
-        </div>
-        <div class="banner">
-            <p>🖼️ Uncover the Art Heist! <a href="https://handmadefunjess.etsy.com/listing/1870259137" target="_blank">Buy Now!</a></p>
-            <a href="https://handmadefunjess.etsy.com/listing/1870259137" target="_blank">
-                <img src="https://raw.githubusercontent.com/enoko23/puzzle-cases-site/refs/heads/main/Leonardo_Phoenix_10_A_mysterious_banner_for_Twitch_titled_The_2.jpg" alt="Buy Now!">
-            </a>
-        </div>
+        <a href="https://drive.google.com/drive/folders/1_eZacJBhsNEkbP4p39JkJ3bj0SbNRk5V?usp=drive_link" target="_blank">
+            <img src="https://raw.githubusercontent.com/enoko23/puzzle-cases-site/refs/heads/main/Leonardo_Phoenix_10_A_dark_and_mysterious_banner_for_Twitch_Th_2.jpg" alt="Try the Game Now">
+        </a>
     </div>
-    
+
     <script>
         function checkCulprit() {
             const caseSelected = document.getElementById("case-select").value;
