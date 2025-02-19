@@ -17,14 +17,11 @@
     <meta property="og:url" content="https://www.puzzlecases.com">
     <meta property="og:type" content="website">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BE18LLE717"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-BE18LLE717');
-    </script>
+    <!-- Twitter Card (Per condivisione su Twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Puzzle Cases - Who is the Culprit?">
+    <meta name="twitter:description" content="Solve mysteries and test your detective skills!">
+    <meta name="twitter:image" content="https://www.puzzlecases.com/cover-image.jpg">
 
     <style>
         body {
@@ -48,26 +45,13 @@
             font-size: 20px;
             font-weight: bold;
         }
-        /* Banner Section */
         .banner-container {
-            margin-top: 50px;
-            text-align: center;
+            margin-top: 40px;
         }
-        .banner-container a {
-            display: inline-block;
-            text-decoration: none;
-        }
-        .banner-container img {
+        .banner {
             width: 80%;
-            max-width: 800px;
+            max-width: 900px;
             border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
-        }
-        .banner-text {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #FFD700; /* Giallo dorato per attirare l'attenzione */
         }
     </style>
 </head>
@@ -88,14 +72,11 @@
     
     <p id="result"></p>
 
-    <!-- New Central Banner -->
+    <!-- Banner Image -->
     <div class="banner-container">
-        <p class="banner-text">🕵️ Try a Free Mini-Case! Download Now! 🕵️</p>
-        <a href="https://drive.google.com/drive/folders/1_eZacJBhsNEkbP4p39JkJ3bj0SbNRk5V?usp=drive_link" target="_blank">
-            <img src="https://raw.githubusercontent.com/enoko23/puzzle-cases-site/refs/heads/main/Leonardo_Phoenix_10_A_dark_and_mysterious_banner_for_Twitch_Th_2.jpg" alt="Try the Game Now">
-        </a>
+        <img class="banner" src="https://raw.githubusercontent.com/enoko23/puzzle-cases-site/refs/heads/main/Leonardo_Phoenix_10_A_dark_and_mysterious_banner_for_Twitch_Th_2.jpg" alt="Puzzle Cases Banner">
     </div>
-
+    
     <script>
         function checkCulprit() {
             const caseSelected = document.getElementById("case-select").value;
