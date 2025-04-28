@@ -28,6 +28,14 @@
             font-size: 20px;
             font-weight: bold;
         }
+        .banner {
+            margin-top: 50px;
+        }
+        .banner img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -48,6 +56,13 @@
 
     <p id="result"></p>
 
+    <!-- BANNER SOTTO AL BOTTONE -->
+    <div class="banner">
+        <a href="https://www.etsy.com/it/listing/4297652773/the-flower-of-guilt-solve-a-chilling" target="_blank">
+            <img src="https://https://github.com/enoko23/puzzle-cases-site/blob/main/Leonardo_Phoenix_10_A_dark_and_mysterious_banner_for_Twitch_Th_2.jpg?raw=true" alt="Try our free case!">
+        </a>
+    </div>
+
     <script>
         function checkCulprit() {
             const caseSelected = document.getElementById("case-select").value;
@@ -57,19 +72,19 @@
 
             if (caseSelected === "room_408") {
                 correctCulprit = "leonardo neri";
-                successMessage = "\u2705 Correct! Leonardo Neri was caught on camera after claiming he had left. The truth couldn't stay hidden.";
+                successMessage = "✅ Correct! Leonardo Neri was caught on camera after claiming he had left. The truth couldn't stay hidden.";
             } else if (caseSelected === "collector_case") {
                 correctCulprit = "marco rinaldi";
-                successMessage = "\u2705 Correct! Marco Rinaldi's obsession with rare artifacts connected him to the missing evidence.";
+                successMessage = "✅ Correct! Marco Rinaldi's obsession with rare artifacts connected him to the missing evidence.";
             } else if (caseSelected === "flower_guilt") {
                 correctCulprit = "luca bianchi";
-                successMessage = "\u2705 Correct! Luca Bianchi's fanatic view of purity, mixed with the botanical clues, revealed his terrible secret.";
+                successMessage = "✅ Correct! Luca Bianchi's fanatic view of purity, mixed with the botanical clues, revealed his terrible secret.";
             }
 
             if (suspect === correctCulprit) {
                 document.getElementById("result").innerText = successMessage;
             } else {
-                document.getElementById("result").innerText = "\u274C Wrong answer! Keep investigating...";
+                document.getElementById("result").innerText = "❌ Wrong answer! Keep investigating...";
             }
         }
     </script>
