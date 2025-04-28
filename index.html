@@ -4,95 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puzzle Cases - Who is the Culprit?</title>
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Solve the mystery! Play an interactive detective escape room game.">
-    <meta name="keywords" content="escape room, mystery game, detective, crime investigation, whodunit">
-    <meta name="author" content="Puzzle Cases">
-
-    <!-- Social Media Preview (Open Graph) -->
-    <meta property="og:title" content="Puzzle Cases - Who is the Culprit?">
-    <meta property="og:description" content="Solve mysteries and test your detective skills!">
-    <meta property="og:image" content="https://www.puzzlecases.com/cover-image.jpg">
-    <meta property="og:url" content="https://www.puzzlecases.com">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card (Per condivisione su Twitter) -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Puzzle Cases - Who is the Culprit?">
-    <meta name="twitter:description" content="Solve mysteries and test your detective skills!">
-    <meta name="twitter:image" content="https://www.puzzlecases.com/cover-image.jpg">
-
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
             background-color: #121212;
             color: white;
+            text-align: center;
+            padding: 40px;
         }
         h1 {
             color: red;
-            font-size: 36px;
+            margin-bottom: 30px;
         }
-        input, button {
+        select, input, button {
             margin: 10px;
             padding: 10px;
             font-size: 16px;
+            border-radius: 5px;
+            border: none;
         }
         #result {
             margin-top: 20px;
             font-size: 20px;
             font-weight: bold;
         }
-        .banner-container {
-            margin-top: 40px;
-        }
-        .banner {
-            width: 80%;
-            max-width: 900px;
-            border-radius: 10px;
-        }
     </style>
 </head>
 <body>
     <h1>Puzzle Cases - Who is the Culprit?</h1>
-    <p>Select your case and enter the suspect's name to check if you solved the mystery!</p>
-    
+    <p>Select your case and enter the suspect's name to see if you solved the mystery!</p>
+
     <label for="case-select">Choose a case:</label>
     <select id="case-select">
         <option value="room_408">The Mystery of Room 408</option>
         <option value="collector_case">The Collector's Case</option>
+        <option value="flower_guilt">The Flower of Guilt</option>
     </select>
-    
+
     <br>
-    
+
     <input type="text" id="suspect-name" placeholder="Enter suspect's name">
     <button onclick="checkCulprit()">Check</button>
-    
+
     <p id="result"></p>
 
-    <!-- Banner Image -->
-    <div class="banner-container">
-        <img class="banner" src="https://raw.githubusercontent.com/enoko23/puzzle-cases-site/refs/heads/main/Leonardo_Phoenix_10_A_dark_and_mysterious_banner_for_Twitch_Th_2.jpg" alt="Puzzle Cases Banner">
-    </div>
-    
     <script>
         function checkCulprit() {
             const caseSelected = document.getElementById("case-select").value;
             const suspect = document.getElementById("suspect-name").value.trim().toLowerCase();
             let correctCulprit = "";
-            
+            let successMessage = "";
+
             if (caseSelected === "room_408") {
-                correctCulprit = "leonardo neri"; // Correct answer for Room 408
+                correctCulprit = "leonardo neri";
+                successMessage = "\u2705 Correct! Leonardo Neri was caught on camera after claiming he had left. The truth couldn't stay hidden.";
             } else if (caseSelected === "collector_case") {
-                correctCulprit = "marco rinaldi"; // Correct answer for The Collector's Case
+                correctCulprit = "marco rinaldi";
+                successMessage = "\u2705 Correct! Marco Rinaldi's obsession with rare artifacts connected him to the missing evidence.";
+            } else if (caseSelected === "flower_guilt") {
+                correctCulprit = "luca bianchi";
+                successMessage = "\u2705 Correct! Luca Bianchi's fanatic view of purity, mixed with the botanical clues, revealed his terrible secret.";
             }
-            
+
             if (suspect === correctCulprit) {
-                document.getElementById("result").innerText = "✅ Correct! You solved the case!";
+                document.getElementById("result").innerText = successMessage;
             } else {
-                document.getElementById("result").innerText = "❌ Wrong answer! Keep investigating...";
+                document.getElementById("result").innerText = "\u274C Wrong answer! Keep investigating...";
             }
         }
     </script>
